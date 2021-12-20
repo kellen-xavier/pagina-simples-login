@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="505881512605-ligonvmfu2mpa11k01h8c97k6bsof111.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+</head>
+
+<body>
+    <div class="introducao">
+        <img src="assets/img/introducao.png">
+    </div>
+    <div class="login">
+        <div class="titulo_login">
+            <p>Bem vindo de volta</p>
+            <h2>Faça login na sua conta</h2>
+
+            <div class="form_login">
+                <p>E-mail</p>
+                <div class="input-field" id="username">
+                    <input class="validate" type="email" id="email emailAddress" name="email" placeholder="User e-mail"
+                        pattern=".+@beststartupever\.com" maxLength="200" pattern=".+@beststartupever\.com" required
+                        title="Por favor preencha seu E-mail">
+
+                    <p>Senha</p>
+                    <div class="input-field" id="username">
+                        <input type="password" name="password" placeholder="Senha" class="validate" minlength="8"
+                            required>
+
+                        <div class="input_radio">
+                            <input id="input" type="radio">
+                            <label for="html">Lembre de mim </label>
+
+                            <a id="lembrar_senha" href="#">Esqueceu sua senha?</a>
+                        </div>
+                        <div id="mensage_email"></div>
+                    </div>
+                </div>
+                <div class="entrar_login">
+                    <input id="titulo_botao" type="submit" value="ENTRAR">
+
+                    <div id="login_conta" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="370"
+                        data-height="50" data-longtitle="true" data-lang="pt-BR">
+                        <a href="">
+                            <img id="login_conta_icone" src="assets/img/iconfinder_Google.png">
+                            Ou faça login com o Google
+                        </a>
+                    </div>
+                </div>
+                <div class="cadastro">
+                    <a id="cadastro_conta" href="#">Não tem uma conta? Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+</script>
+
+</html>

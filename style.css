@@ -1,0 +1,131 @@
+body {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #F7FAFC;
+}
+
+/* wallpaper */
+.introducao {
+    position: relative;
+    width: 420px;
+    height: auto;
+    left: 0px;
+    top: -2px;
+    background: #F7FAFC;
+    padding: 16% 16%;
+    display: inherit;
+}
+
+.login {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -42%;
+    position: relative;
+    margin-left: 56%;
+    width: 420px;
+    height: auto;
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    top: 39px;
+    position: relative;
+}
+
+.validate {
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 50px;
+    width: 350px;
+}
+
+.input_radio {
+    margin: 28px auto;
+}
+
+label {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1A202C;
+}
+
+#lembrar_senha {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2B6CB0;
+    text-decoration-line: blink;
+    position: relative;
+    left: 92px;
+}
+
+#titulo_botao {
+    background: #04C45C;
+    border-radius: 5px;
+    position: relative;
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    color: #FFFFFF;
+}
+
+#login_conta {
+    top: 28px;
+    bottom: 25.67%;
+    background: #1A202C;
+    border-radius: 5px;
+    position: relative;
+    text-align: justify;
+    width: 350px;
+    height: 50px;
+}
+
+#login_conta a {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration-line: blink;
+    position: relative;
+    top: 12px;
+    left: 60px;
+}
+
+#login_conta_icone {
+    left: 67.64%;
+    right: 30.97%;
+    top: 70.44%;
+    bottom: 27.33%;
+}
+
+.cadastro {
+    text-align: center;
+}
+
+#cadastro_conta {
+    position: relative;
+    width: 233px;
+    height: 19px;
+    top: 162px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1A202C;
+    text-align: center;
+    text-decoration-line: blink;
+}
