@@ -11,6 +11,8 @@
         content="505881512605-ligonvmfu2mpa11k01h8c97k6bsof111.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
 </head>
 
 <body>
@@ -23,26 +25,23 @@
             <h2>Faça login na sua conta</h2>
 
             <div class="form_login">
-                <p>E-mail</p>
+
                 <div class="input-field" id="username">
-                    <input class="validate" type="email" id="email emailAddress" name="email" placeholder="User e-mail"
-                        pattern=".+@beststartupever\.com" maxLength="200" pattern=".+@beststartupever\.com" required
-                        title="Por favor preencha seu E-mail">
-
-                    <p>Senha</p>
-                    <div class="input-field" id="username">
-                        <input type="password" name="password" placeholder="Senha" class="validate" minlength="8"
-                            required>
-
-                        <div class="input_radio">
-                            <input id="input" type="radio">
-                            <label for="html">Lembre de mim </label>
-
-                            <a id="lembrar_senha" href="#">Esqueceu sua senha?</a>
-                        </div>
-                        <div id="mensage_email"></div>
-                    </div>
+                    <label>E-mail:</label>
+                    <input class="validate" type="email" id="email" name="email" placeholder="User e-mail" required>
                 </div>
+
+                <div class="input-field" id="username">
+                    <label for="field">Senha: </label>
+                    <input class="validate" type="password" name="password" placeholder="Senha" minlength="8" required>
+                </div>
+                <div class="input_radio">
+                    <input id="input" type="radio">
+                    <label>Lembre de mim </label>
+
+                    <a id="lembrar_senha" href="#">Esqueceu sua senha?</a>
+                </div>
+
                 <div class="entrar_login">
                     <input id="titulo_botao" type="submit" value="ENTRAR">
 
@@ -61,14 +60,22 @@
         </div>
 </body>
 
-<script>
-    function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    /*verificação*/
+    function IsEmail(email) {
+        var regex =
+            /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        return regex.test(email);
     }
+
+    $("#titulo_botao").live("click", function () {
+        if (!IsEmail($("#email").val())) {
+            alert("Invalid email address.");
+        } else {
+            alert("Valid email address.");
+        }
+    });
 </script>
 
 </html>

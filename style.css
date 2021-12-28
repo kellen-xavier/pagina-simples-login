@@ -42,10 +42,17 @@ body {
     border-radius: 3px;
     height: 50px;
     width: 350px;
+    padding: 10px;
 }
 
 .input_radio {
-    margin: 28px auto;
+    margin: 28px 2px;
+}
+
+#username {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 label {
@@ -128,4 +135,25 @@ label {
     color: #1A202C;
     text-align: center;
     text-decoration-line: blink;
+}
+
+@media (max-width: 926px) {
+    .introducao {
+        display: none;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        width: 420px;
+        height: auto;
+        margin-top: 0;
+        margin-left: -8%;
+    }
+
+    .titulo_login {
+        display: flex;
+        flex-direction: column;    
+    }
 }
